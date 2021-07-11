@@ -5,15 +5,14 @@ import {
   DEFAULT_ENCODE_TOOLS_OPTIONS as DEFAULT_ENCODE_TOOLS_REGULAR_OPTIONS,
   EncodingOptions
 } from '@etomon/encode-tools/lib/EncodeTools';
+
 import {
-  DEFAULT_ENCODE_TOOLS_OPTIONS as DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS
+  // @ts-ignore
+  DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS as DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS
 } from '@etomon/encode-tools/lib/EncodeToolsNative';
 import {createReadStream, createWriteStream, existsSync, readFileSync, ReadStream, WriteStream} from 'fs';
 import * as path from 'path';
 import * as os from 'os';
-import {EncodeToolsNative} from "@etomon/encode-tools";
-
-;
 
 export interface IOCommandArgs {
   inputBuffer: string|'-'|undefined,
@@ -30,6 +29,8 @@ let defaults: EncodingOptions;
 export function getDefaults(): EncodingOptions {
   if (defaults)
     return defaults;
+
+  let DEFAULT_ENCODE_TOOLS_OPTIONS = EncodeToolsBase.isNative ? DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS : DEFAULT_ENCODE_TOOLS_REGULAR_OPTIONS;
 
   let rcFile: any;
   if (process.env.ENCLIRC) {
