@@ -22,6 +22,17 @@ Which is equivalent to
 })();
 ```
 
+## Docker
+I've provided two Docker images with `encode-cli` installed. `znetstar/encode-cli` which is based on `ubuntu:20.10` and Node.js 14 from the NodeSource PPA,
+and `znetstar/encode-cli:slim` which is based off of `node:14-slim`.
+
+The former includes the native modules (discussed in the section below), and the latter does not and is 3 times larger.
+
+Example using Docker
+```shell
+  echo 'hash me!' | docker run --rm -i znetstar/encode-cli hash -a md5 -f base64
+```
+
 **Important**
 By default, this will use the portable (pure javascript) version of `@etomon/encode-tools` with no native modules. The native version has
 more formats and has better performance. [A better explanation can be found in the `@etomon/encode-tools` documentation.](https://etomonusa.github.io/encode-tools/index.html#requirements) 
