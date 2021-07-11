@@ -35,7 +35,7 @@ export function getDefaults(): EncodingOptions {
   if (process.env.ENCLIRC) {
     rcFile = JSON.parse(process.env.ENCLIRC);
   } else {
-    rcFile = {};
+    rcFile = (global as any).DEFAULT_ENCODE_TOOLS_OPTIONS || {};
   }
 
   if (!rcFile) {
