@@ -60,8 +60,9 @@ export default class UniqueId extends EncodeToolsBase {
     const output = await this.getOutputAsStream(args);
     const enc = this.encoder(flags);
     let value = enc.uniqueId(flags.idFormat, ...flags.args || []);
-    if (typeof(value) === 'number')
-      value = String(value);
+    if (typeof(value) === 'number') {
+        value = Buffer.from(value.toString(16), 'hex');
+    }
     const outputBuffer = enc.encodeBuffer(value, flags.format);
 
     output.end(outputBuffer);
