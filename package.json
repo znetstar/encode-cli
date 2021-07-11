@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
   "bin": {
-    "encli": "./bin/run"
+    "encli": "./bin/run",
+    "encode-cli": "./bin/run"
   },
   "bugs": "https://github.com/znetstar/encode-cli/issues",
   "dependencies": {

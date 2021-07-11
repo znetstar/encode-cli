@@ -10,7 +10,7 @@ All subcommands can be accessed using the `encli` command,
 
 For example, the `EncodeTools.hash` function can be called as follows
 ```shell
-  echo 'hash me!' | npx encli hash -a md5 -f base64
+  echo 'hash me!' | npx encode-cli hash -a md5 -f base64
 ```
 
 Which is equivalent to 
