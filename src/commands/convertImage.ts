@@ -28,7 +28,7 @@ export const ImageOperationFlags = {
 
 export default class ConvertImage extends EncodeToolsBase {
   static description = 'Saves an image in the provided format, performing no operations on the image writing the result to to a file or stdout'
-  static example = `curl -sL 'https://zb.gy/6rQl' | encli convertImage png - /tmp/x.png; open /tmp/x.png`
+  static example = `curl -sL 'https://zb.gy/potd/wiki' | encli convertImage png - /tmp/photo.png; open /tmp/photo.png`
 
   static flags = {
     help: flags.help(),

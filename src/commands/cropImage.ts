@@ -6,7 +6,7 @@ import {ImageFlags, ImageOperationFlags} from "./convertImage";
 
 export default class CropImage extends EncodeToolsBase {
   static description = 'Crops an image and writes the result in the provided format to to a file or stdout'
-  static example = `curl -sL 'https://zb.gy/6rQl' | encli cropImage -w 300 -h 300 -x 10 -y 10 -i png - /tmp/x.png; open /tmp/x.png`
+  static example = `curl -sL 'https://zb.gy/potd/wiki' | encli cropImage -w 300 -h 300 -x 10 -y 10 -i png - /tmp/photo.png; open /tmp/photo.png`
 
 
   static flags = {

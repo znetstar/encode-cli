@@ -6,7 +6,7 @@ import {ImageFlags, ImageOperationFlags} from "./convertImage";
 
 export default class AdjustImageBrightness extends EncodeToolsBase {
   static description = 'Resizes an image and writes the result in the provided format to to a file or stdout'
-  static example = `curl -sL 'https://zb.gy/6rQl' | encli adjustImageBrightness -m 5 - /tmp/x.png; open /tmp/x.png`
+  static example = `curl -sL 'https://zb.gy/potd/wiki' | encli adjustImageBrightness -m 5 - /tmp/photo.png; open /tmp/photo.png`
 
 
   static flags = {

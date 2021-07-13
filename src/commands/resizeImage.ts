@@ -7,7 +7,7 @@ import {ImageFlags, ImageOperationFlags} from "./convertImage";
 
 export default class ResizeImage extends EncodeToolsBase {
   static description = 'Resizes an image and writes the result in the provided format to to a file or stdout'
-  static example = `curl -sL 'https://zb.gy/6rQl' | encli resizeImage -w 200 -i png - /tmp/x.png; open /tmp/x.png`
+  static example = `curl -sL 'https://zb.gy/potd/wiki' | encli resizeImage -w 200 -i png - /tmp/photo.png; open /tmp/photo.png`
 
 
   static flags = {
