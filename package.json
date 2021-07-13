@@ -1,7 +1,7 @@
 {
     "name": "encode-cli",
     "description": "CLI for @etomon/encode-tools",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
     "bin": {
         "encli": "./bin/run",
