@@ -1,7 +1,7 @@
 {
     "name": "encode-cli",
     "description": "CLI for @etomon/encode-tools",
-    "version": "1.0.6",
+    "version": "1.1.0",
     "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
     "bin": {
         "encli": "./bin/run",
@@ -9,7 +9,7 @@
     },
     "bugs": "https://github.com/znetstar/encode-cli/issues",
     "dependencies": {
-        "@etomon/encode-tools": "^2",
+        "@etomon/encode-tools": "^2.1.1",
         "@oclif/command": "^1.8.0",
         "@oclif/config": "^1.17.0",
         "@oclif/plugin-help": "^3.2.2",

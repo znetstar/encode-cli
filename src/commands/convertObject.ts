@@ -1,7 +1,7 @@
 import {flags} from '@oclif/command'
 import {default as EncodeTools, SerializationFormat} from '@etomon/encode-tools/lib/EncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
-import EncodeBuffer, {EncodingFlags} from "./encodeBuffer";
+import {EncodingFlags} from "./encodeBuffer";
 
 export type SerializationFlags = {
   serializationFormat: SerializationFormat
@@ -19,6 +19,7 @@ export const ReserializingFlags = {
     default: getDefaults().serializationFormat,
     options: [
       SerializationFormat.json,
+      SerializationFormat.cbor,
       SerializationFormat.msgpack,
       SerializationFormat.bson
     ],
@@ -30,6 +31,7 @@ export const ReserializingFlags = {
     default: getDefaults().serializationFormat,
     options: [
       SerializationFormat.json,
+      SerializationFormat.cbor,
       SerializationFormat.msgpack,
       SerializationFormat.bson
     ],
@@ -44,6 +46,7 @@ export const SerializingFlags = {
     default: getDefaults().serializationFormat,
     options: [
       SerializationFormat.json,
+      SerializationFormat.cbor,
       SerializationFormat.msgpack,
       SerializationFormat.bson
     ],
@@ -58,6 +61,7 @@ export const DeserializingFlags = {
     default: getDefaults().serializationFormat,
     options: [
       SerializationFormat.json,
+      SerializationFormat.cbor,
       SerializationFormat.msgpack,
       SerializationFormat.bson
     ],
