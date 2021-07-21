@@ -7,6 +7,10 @@
         "encli": "./bin/run",
         "encode-cli": "./bin/run"
     },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org",
+      "access": "public"
+    },
     "bugs": "https://github.com/znetstar/encode-cli/issues",
     "dependencies": {
         "@etomon/encode-tools": "^2.1.1",
