@@ -8,12 +8,12 @@
         "encode-cli": "./bin/run"
     },
     "publishConfig": {
-      "registry": "https://registry.npmjs.org",
-      "access": "public"
+        "registry": "https://registry.npmjs.org",
+        "access": "public"
     },
     "bugs": "https://github.com/znetstar/encode-cli/issues",
     "dependencies": {
-        "@etomon/encode-tools": "^2.1.1",
+        "@etomon/encode-tools": "^2.2.0",
         "@oclif/command": "^1.8.0",
         "@oclif/config": "^1.17.0",
         "@oclif/plugin-help": "^3.2.2",
