@@ -1,5 +1,6 @@
 import {flags} from '@oclif/command'
-import {default as EncodeTools, HashAlgorithm, ImageFormat} from '@etomon/encode-tools/lib/EncodeTools';
+import {default as EncodeTools, HashAlgorithm, ImageFormat} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 
@@ -57,7 +58,7 @@ export default class ConvertImage extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: ImageFlags): EncodeTools {
+  protected encoder(flags: ImageFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       imageFormat: flags.imageFormat,
       binaryEncoding: flags.format

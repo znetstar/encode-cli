@@ -3,7 +3,8 @@ import {
   BinaryEncoding,
   default as EncodeTools,
   DEFAULT_ENCODE_TOOLS_OPTIONS
-} from '@etomon/encode-tools/lib/EncodeTools';
+} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 
@@ -54,7 +55,7 @@ export default class DecodeBuffer extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: BufferEncodeFlags): EncodeTools {
+  protected encoder(flags: BufferEncodeFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       binaryEncoding: flags.format
     });

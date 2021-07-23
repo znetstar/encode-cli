@@ -4,7 +4,8 @@ import {
   default as EncodeTools,
   DEFAULT_ENCODE_TOOLS_OPTIONS,
   HashAlgorithm
-} from '@etomon/encode-tools/lib/EncodeTools';
+} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 
@@ -68,7 +69,7 @@ export default class Hash extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: HashFlags): EncodeTools {
+  protected encoder(flags: HashFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       binaryEncoding: flags.format,
       hashAlgorithm: flags.algorithm

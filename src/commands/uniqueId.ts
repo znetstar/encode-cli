@@ -1,5 +1,6 @@
 import {flags} from '@oclif/command'
-import {default as EncodeTools, IDFormat} from '@etomon/encode-tools/lib/EncodeTools';
+import {default as EncodeTools, IDFormat} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 
@@ -47,7 +48,7 @@ export default class UniqueId extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: UniqueIdFlags): EncodeTools {
+  protected encoder(flags: UniqueIdFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       binaryEncoding: flags.format,
       uniqueIdFormat: flags.idFormat

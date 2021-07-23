@@ -1,5 +1,6 @@
 import {flags} from '@oclif/command'
-import {CompressionFormat, default as EncodeTools, HashAlgorithm} from '@etomon/encode-tools/lib/EncodeTools';
+import {CompressionFormat, default as EncodeTools, HashAlgorithm} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 
@@ -55,7 +56,7 @@ export default class Compress extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: CompressFlags): EncodeTools {
+  protected encoder(flags: CompressFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       compressionFormat: flags.compressionFormat,
       compressionLevel: flags.compressionLevel,

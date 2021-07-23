@@ -34,11 +34,8 @@ Example using Docker
 ```
 
 **Important**
-By default, this will use the portable (pure javascript) version of `@etomon/encode-tools` with no native modules. The native version has
-more formats and has better performance. [A better explanation can be found in the `@etomon/encode-tools` documentation.](https://etomonusa.github.io/encode-tools/index.html#requirements) 
-To install the native version run `encli plugins:install encode-cli-native`.
 
-Two other deviations from the library exist to better accommodate the command line.
+Two deviations from the library exist to better accommodate the command line.
 
 First, input and output can be directed to/from a file or standard input/output. Second, the output of each command can
 be re-encoded as any format accepted by `encodeBuffer` using the `-f` flag.

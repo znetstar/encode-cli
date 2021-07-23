@@ -1,5 +1,6 @@
 import {flags} from '@oclif/command'
-import {default as EncodeTools, SerializationFormat} from '@etomon/encode-tools/lib/EncodeTools';
+import {default as EncodeTools, SerializationFormat} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {EncodingFlags} from "./encodeBuffer";
 
@@ -100,7 +101,7 @@ export default class ConvertObject extends EncodeToolsBase {
     }
   ]
 
-  protected encoder(flags: ReserializationFlags): EncodeTools {
+  protected encoder(flags: ReserializationFlags): IEncodeTools {
     return new (EncodeToolsBase.EncodeTools)({
       serializationFormat: flags.inputSerializationFormat
     });

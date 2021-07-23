@@ -3,8 +3,9 @@ import {
   BinaryEncoding,
   default as EncodeTools,
   DEFAULT_ENCODE_TOOLS_OPTIONS as DEFAULT_ENCODE_TOOLS_REGULAR_OPTIONS,
-  EncodingOptions
-} from '@etomon/encode-tools/lib/EncodeTools';
+  EncodingOptions,
+  EncodeToolsAuto
+} from '@etomon/encode-tools/lib/EncodeToolsAuto';
 
 import {
   // @ts-ignore
@@ -13,6 +14,7 @@ import {
 import {createReadStream, createWriteStream, existsSync, readFileSync, ReadStream, WriteStream} from 'fs';
 import * as path from 'path';
 import * as os from 'os';
+import {IEncodeTools} from "@etomon/encode-tools/lib/IEncodeTools";
 
 export interface IOCommandArgs {
   inputBuffer: string|'-'|undefined,
@@ -88,7 +90,7 @@ export function getDefaults(): EncodingOptions {
 }
 
 export default abstract class EncodeToolsBase extends Command {
-  protected abstract encoder(args: unknown, flags: unknown): EncodeTools;
+  protected abstract encoder(args: unknown, flags: unknown): IEncodeTools;
 
   static flags = {
     help: flags.help(),
@@ -168,11 +170,11 @@ export default abstract class EncodeToolsBase extends Command {
   abstract async run(): Promise<void>;
 
   static get isNative(): boolean {
-    return Boolean((global as any).EncodeTools);
+    return !Object.keys(EncodeToolsAuto.WithDefaults.availableNativeModules).map(k => (EncodeToolsAuto.WithDefaults.availableNativeModules as any)[k]).includes(false);
   }
 
   static get EncodeTools() {
-    return this.isNative ? (global as any).EncodeTools : EncodeTools;
+    return EncodeToolsAuto;
   }
 }
 
