@@ -23,7 +23,8 @@ export const EncodingFlags = {
       BinaryEncoding.base64,
       BinaryEncoding.arrayBuffer,
       BinaryEncoding.nodeBuffer,
-      BinaryEncoding.hex
+      BinaryEncoding.hex,
+      BinaryEncoding.ascii85
     ],
     description: 'Format to encode output as'
   })
