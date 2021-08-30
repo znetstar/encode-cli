@@ -1,12 +1,8 @@
-import { flags} from '@oclif/command'
-import {
-  BinaryEncoding,
-  default as EncodeTools,
-  DEFAULT_ENCODE_TOOLS_OPTIONS
-} from '@etomon/encode-tools/lib/EncodeToolsAuto';
-import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
+import {flags} from '@oclif/command'
+import {BinaryEncoding} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+import {IEncodeTools} from '@etomon/encode-tools/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
-import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
+import {BufferEncodeFlags} from "./encodeBuffer";
 
 export const DecodingFlags = {
   format: flags.enum<BinaryEncoding>({
@@ -20,7 +16,8 @@ export const DecodingFlags = {
       BinaryEncoding.base64,
       BinaryEncoding.arrayBuffer,
       BinaryEncoding.nodeBuffer,
-      BinaryEncoding.hex
+      BinaryEncoding.hex,
+      BinaryEncoding.ascii85
     ],
     description: 'Format to decode input from'
   })
