@@ -26,7 +26,7 @@ Which is equivalent to
 I've provided two Docker images with `encode-cli` installed. `znetstar/encode-cli` which is based on `ubuntu:20.10` and Node.js 14 from the NodeSource PPA,
 and `znetstar/encode-cli:slim` which is based off of `node:14-slim`.
 
-The former includes the native modules (discussed in the section below), and the latter does not and is 3 times larger.
+The former includes the native modules (discussed in the section below), and the latter does not and is 3 times smaller.
 
 Example using Docker
 ```shell
