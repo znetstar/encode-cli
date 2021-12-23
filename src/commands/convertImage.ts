@@ -1,6 +1,6 @@
 import {flags} from '@oclif/command'
-import {default as EncodeTools, HashAlgorithm, ImageFormat} from '@etomon/encode-tools/lib/EncodeToolsAuto';
-import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
+import {default as EncodeTools, HashAlgorithm, ImageFormat} from '@znetstar/encode-tools-native/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@znetstar/encode-tools-native/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 

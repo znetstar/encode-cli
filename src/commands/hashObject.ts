@@ -4,8 +4,8 @@ import {
   default as EncodeTools,
   DEFAULT_ENCODE_TOOLS_OPTIONS,
   HashAlgorithm
-} from '@etomon/encode-tools/lib/EncodeToolsAuto';
-import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
+} from '@znetstar/encode-tools-native/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@znetstar/encode-tools-native/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 import {SerializationFlags, SerializingFlags} from "./convertObject";

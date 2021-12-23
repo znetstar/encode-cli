@@ -1,6 +1,6 @@
 import {flags} from '@oclif/command'
-import {CompressionFormat, default as EncodeTools, HashAlgorithm} from '@etomon/encode-tools/lib/EncodeToolsAuto';
-import { IEncodeTools } from  '@etomon/encode-tools/lib/IEncodeTools';
+import {CompressionFormat, default as EncodeTools, HashAlgorithm} from '@znetstar/encode-tools-native/lib/EncodeToolsAuto';
+import { IEncodeTools } from  '@znetstar/encode-tools-native/lib/IEncodeTools';
 import EncodeToolsBase, {getDefaults} from "./EncodeToolsBase";
 import {BufferEncodeFlags, EncodingFlags} from "./encodeBuffer";
 import {CompressFlags} from "./compress";

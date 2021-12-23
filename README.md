@@ -2,8 +2,8 @@
 
 ## Intro
 
-Encode CLI is a CLI wrapper for the [`@etomon/encode-tools`](https://github.com/EtomonUSA/encode-tools) npm package.
-Each of the subcommands map directly to a function on the `EncodeTools` class in `@etomon/encode-tools` and retain
+Encode CLI is a CLI wrapper for the [`@znetstar/encode-tools-native`](https://github.com/znetstar/encode-tools) npm package.
+Each of the subcommands map directly to a function on the `EncodeTools` class in `@znetstar/encode-tools-native` and retain
 same arguments.
 
 All subcommands can be accessed using the `encli` command,
@@ -16,7 +16,7 @@ For example, the `EncodeTools.hash` function can be called as follows
 Which is equivalent to 
 ```javascript
 (async () => {
-  const enc = new (require('@etomon/encode-tools/lib/EncodeTools').EncodeTools)();
+  const enc = new (require('@znetstar/encode-tools-native/lib/EncodeTools').EncodeTools)();
   const buf = await enc.hash('hash me!', 'md5');
   process.stdout.end(buf.toString('base64'));
 })();
@@ -60,7 +60,7 @@ The defaults can also be passed by setting the environment variable `ENCLIRC` wi
 
 ## Documentation
 
-For documentation refer to the [`@etomon/encode-tools` documentation](https://etomonusa.github.io/encode-tools/modules/EncodeTools.html),
+For documentation refer to the [`@znetstar/encode-tools-native` documentation](https://znetstar.github.io/encode-tools-native/modules/encodetoolsnative.html),
 all subcommands accept the `--help` argument which will print the required syntax. 
 
 ## License

@@ -5,16 +5,16 @@ import {
   DEFAULT_ENCODE_TOOLS_OPTIONS as DEFAULT_ENCODE_TOOLS_REGULAR_OPTIONS,
   EncodingOptions,
   EncodeToolsAuto
-} from '@etomon/encode-tools/lib/EncodeToolsAuto';
+} from '@znetstar/encode-tools-native/lib/EncodeToolsAuto';
 
 import {
   // @ts-ignore
   DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS as DEFAULT_ENCODE_TOOLS_NATIVE_OPTIONS
-} from '@etomon/encode-tools/lib/EncodeToolsNative';
+} from '@znetstar/encode-tools-native/lib/EncodeToolsNative';
 import {createReadStream, createWriteStream, existsSync, readFileSync, ReadStream, WriteStream} from 'fs';
 import * as path from 'path';
 import * as os from 'os';
-import {IEncodeTools} from "@etomon/encode-tools/lib/IEncodeTools";
+import {IEncodeTools} from "@znetstar/encode-tools-native/lib/IEncodeTools";
 
 export interface IOCommandArgs {
   inputBuffer: string|'-'|undefined,
