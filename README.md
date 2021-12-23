@@ -1,5 +1,9 @@
 # encode-cli
 
+[![npm version](https://badge.fury.io/js/encode-cli.svg)](https://badge.fury.io/js/encode-cli)
+
+[![Build Status](https://travis-ci.com/znetstar/encode-cli.svg?branch=master)](https://travis-ci.com/znetstar/encode-cli)
+
 ## Intro
 
 Encode CLI is a CLI wrapper for the [`@znetstar/encode-tools-native`](https://github.com/znetstar/encode-tools) npm package.

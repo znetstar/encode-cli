@@ -1,7 +1,7 @@
 {
     "name": "encode-cli",
     "description": "CLI for @znetstar/encode-tools-native",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "author": "Zachary Boyd <zachary@zacharyboyd.nyc>",
     "bin": {
         "encli": "./bin/run",
