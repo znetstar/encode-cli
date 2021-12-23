@@ -167,7 +167,7 @@ export default abstract class EncodeToolsBase extends Command {
     return { input, output };
   }
 
-  abstract async run(): Promise<void>;
+  abstract run(): Promise<void>;
 
   static get isNative(): boolean {
     return !Object.keys(EncodeToolsAuto.WithDefaults.availableNativeModules).map(k => (EncodeToolsAuto.WithDefaults.availableNativeModules as any)[k]).includes(false);
