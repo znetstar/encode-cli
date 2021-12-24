@@ -37,6 +37,11 @@ export const ReserializingFlags = {
       SerializationFormat.bson
     ],
     description: 'Format to serialize output as'
+  }),
+  toPojo: flags.boolean({
+    char: 't',
+    required: false,
+    description: 'Convert input to POJO before serializing'
   })
 };
 
@@ -52,6 +57,11 @@ export const SerializingFlags = {
       SerializationFormat.bson
     ],
     description: 'Format to serialize output as'
+  }),
+  toPojo: flags.boolean({
+    char: 't',
+    required: false,
+    description: 'Convert input to POJO before serializing'
   })
 };
 
@@ -67,6 +77,11 @@ export const DeserializingFlags = {
       SerializationFormat.bson
     ],
     description: 'Format to deserialize input from'
+  }),
+  toPojo: flags.boolean({
+    char: 't',
+    required: false,
+    description: 'Convert input to POJO before serializing'
   })
 };
 
@@ -111,8 +126,8 @@ export default class ConvertObject extends EncodeToolsBase {
     const {args, flags} = this.parse(ConvertObject)
 
     const { input, output } = await this.getInputOutput(args);
-    const inEnc = new (EncodeToolsBase.EncodeTools)({ serializationFormat: flags.inputSerializationFormat, binaryEncoding: flags.format });
-    const outEnc = new (EncodeToolsBase.EncodeTools)({ serializationFormat: flags.outputSerializationFormat, binaryEncoding: flags.format });
+    const inEnc = new (EncodeToolsBase.EncodeTools)({ serializationFormat: flags.inputSerializationFormat, binaryEncoding: flags.format, useToPojoBeforeSerializing: flags.toPojo });
+    const outEnc = new (EncodeToolsBase.EncodeTools)({ serializationFormat: flags.outputSerializationFormat, binaryEncoding: flags.format, useToPojoBeforeSerializing: flags.toPojo });
     const outputBuffer = outEnc.serializeObject(inEnc.deserializeObject(input, flags.inputSerializationFormat));
     output.end(outputBuffer);
     process.exit(0);
