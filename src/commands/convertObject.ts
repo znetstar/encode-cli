@@ -22,7 +22,8 @@ export const ReserializingFlags = {
       SerializationFormat.json,
       SerializationFormat.cbor,
       SerializationFormat.msgpack,
-      SerializationFormat.bson
+      SerializationFormat.bson,
+      SerializationFormat.json5
     ],
     description: 'Format to deserialize input as'
   }),
@@ -34,7 +35,8 @@ export const ReserializingFlags = {
       SerializationFormat.json,
       SerializationFormat.cbor,
       SerializationFormat.msgpack,
-      SerializationFormat.bson
+      SerializationFormat.bson,
+      SerializationFormat.json5
     ],
     description: 'Format to serialize output as'
   }),
@@ -54,7 +56,8 @@ export const SerializingFlags = {
       SerializationFormat.json,
       SerializationFormat.cbor,
       SerializationFormat.msgpack,
-      SerializationFormat.bson
+      SerializationFormat.bson,
+      SerializationFormat.json5
     ],
     description: 'Format to serialize output as'
   }),
@@ -74,7 +77,8 @@ export const DeserializingFlags = {
       SerializationFormat.json,
       SerializationFormat.cbor,
       SerializationFormat.msgpack,
-      SerializationFormat.bson
+      SerializationFormat.bson,
+      SerializationFormat.json5
     ],
     description: 'Format to deserialize input from'
   }),
